@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sacred Hands Coffee</title>
+    <meta name="description" content="Get in touch with Sacred Hands Coffee for partnerships, wholesale opportunities, and collaborations.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#C6A988',
+                            secondary: '#8B4513',
+                            coffee: '#6F4E37',
+                            light: '#E8D5B7',
+                            dark: '#5D4037'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-serif font-bold text-brand-coffee">Sacred Hands Coffee</h1>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Home</a>
+                        <a href="about.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Our Story</a>
+                        <a href="shop.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Shop</a>
+                        <a href="projects.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Projects</a>
+                        <a href="people.html" class="text-brand-coffee hover:text-brand-primary transition-colors">People</a>
+                        <a href="journal.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Journal</a>
+                        <a href="contact.html" class="text-brand-primary font-semibold">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-btn" id="mobile-menu-btn">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:hidden mobile-menu" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+                <a href="index.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Our Story</a>
+                <a href="shop.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Shop</a>
+                <a href="projects.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Projects</a>
+                <a href="people.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">People</a>
+                <a href="journal.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Journal</a>
+                <a href="contact.html" class="block px-3 py-2 text-brand-primary font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold text-brand-coffee mb-6">Let's Connect</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Want to work with us? Whether you're a coffee enthusiast, roaster, or organization looking to collaborate — we'd love to hear from you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h2 class="text-3xl font-serif font-bold text-brand-coffee mb-6">Get In Touch</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Ready to partner with Sacred Hands Coffee? Fill out the form below and we'll get back to you within 24 hours.
+                    </p>
+                    
+                    <!-- Placeholder for Google Form - Replace with actual embed code -->
+                    <div class="bg-gray-100 p-8 rounded-lg border-2 border-dashed border-gray-300">
+                        <p class="text-center text-gray-600 mb-4">
+                            <strong>Google Form will be embedded here</strong>
+                        </p>
+                        <p class="text-center text-sm text-gray-500">
+                            Please provide your actual Google Form embed code to replace this placeholder
+                        </p>
+                        
+                        <!-- Temporary contact form for demo purposes -->
+                        <form class="space-y-4 mt-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company/Organization</label>
+                                <input type="text" id="company" name="company" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
+                            </div>
+                            <div>
+                                <label for="interest" class="block text-sm font-medium text-gray-700 mb-1">I'm interested in: *</label>
+                                <select id="interest" name="interest" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
+                                    <option value="">Select an option</option>
+                                    <option value="wholesale">Wholesale/Roaster Partnership</option>
+                                    <option value="retail">Retail Purchasing</option>
+                                    <option value="collaboration">Project Collaboration</option>
+                                    <option value="press">Press/Media Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message *</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="bg-brand-coffee text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-serif font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">Email</h4>
+                                <p class="text-brand-light">info@sacredhandscoffee.com</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">Location</h4>
+                                <p class="text-brand-light">Western Kenya</p>
+                                <p class="text-brand-light text-sm">Serving Bungoma, Kakamega, Vihiga, and surrounding counties</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-brand-light hover:text-white transition-colors">Instagram</a>
+                                    <a href="#" class="text-brand-light hover:text-white transition-colors">Twitter</a>
+                                    <a href="#" class="text-brand-light hover:text-white transition-colors">Facebook</a>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">Business Hours</h4>
+                                <p class="text-brand-light text-sm">Monday - Friday: 8:00 AM - 5:00 PM EAT</p>
+                                <p class="text-brand-light text-sm">We typically respond to inquiries within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-brand-light p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-brand-coffee mb-4">Partnership Opportunities</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-brand-primary mr-2">•</span>
+                                <span>Wholesale coffee sourcing for roasters</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-primary mr-2">•</span>
+                                <span>Direct trade partnerships</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-primary mr-2">•</span>
+                                <span>Agricultural development collaborations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-primary mr-2">•</span>
+                                <span>Environmental sustainability projects</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-primary mr-2">•</span>
+                                <span>Educational and research partnerships</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-serif font-bold text-brand-coffee mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600">Common questions about working with Sacred Hands Coffee</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-lg font-semibold text-brand-coffee mb-2">What are your minimum order quantities for wholesale?</h3>
+                    <p class="text-gray-600">Our minimum order for wholesale partners is typically 5 bags (150kg), but we're flexible based on your needs and can work with smaller roasters on custom arrangements.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-lg font-semibold text-brand-coffee mb-2">How can I visit your farms and operations?</h3>
+                    <p class="text-gray-600">We welcome visitors and organize farm tours for partners and serious buyers. Please contact us at least 2 weeks in advance to arrange your visit to Western Kenya.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-lg font-semibold text-brand-coffee mb-2">What certifications do you have?</h3>
+                    <p class="text-gray-600">We're currently working toward organic and fair trade certifications. All our coffee is grown using sustainable practices and we provide complete traceability for every lot.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-lg font-semibold text-brand-coffee mb-2">How do you ensure quality consistency?</h3>
+                    <p class="text-gray-600">Through our Farmer Field School program, we provide year-round training on quality standards, selective harvesting, and proper processing techniques. Each lot is cupped and graded before export.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-coffee text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Sacred Hands Coffee</h3>
+                    <p class="text-gray-300">Coffee with a purpose, from sacred hands to yours.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-brand-primary">Our Story</a></li>
+                        <li><a href="shop.html" class="text-gray-300 hover:text-brand-primary">Shop</a></li>
+                        <li><a href="projects.html" class="text-gray-300 hover:text-brand-primary">Projects</a></li>
+                        <li><a href="journal.html" class="text-gray-300 hover:text-brand-primary">Journal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-300 mb-2">Email: info@sacredhandscoffee.com</p>
+                    <p class="text-gray-300">Location: Western Kenya</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-brand-primary">Instagram</a>
+                        <a href="#" class="text-gray-300 hover:text-brand-primary">Twitter</a>
+                        <a href="#" class="text-gray-300 hover:text-brand-primary">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Sacred Hands Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

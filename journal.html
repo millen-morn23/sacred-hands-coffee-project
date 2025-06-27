@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal - Sacred Hands Coffee</title>
+    <meta name="description" content="Stories from the field, farmer voices, and updates from Sacred Hands Coffee Project in Western Kenya.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#C6A988',
+                            secondary: '#8B4513',
+                            coffee: '#6F4E37',
+                            light: '#E8D5B7',
+                            dark: '#5D4037'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-serif font-bold text-brand-coffee">Sacred Hands Coffee</h1>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Home</a>
+                        <a href="about.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Our Story</a>
+                        <a href="shop.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Shop</a>
+                        <a href="projects.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Projects</a>
+                        <a href="people.html" class="text-brand-coffee hover:text-brand-primary transition-colors">People</a>
+                        <a href="journal.html" class="text-brand-primary font-semibold">Journal</a>
+                        <a href="contact.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-btn" id="mobile-menu-btn">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:hidden mobile-menu" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+                <a href="index.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Our Story</a>
+                <a href="shop.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Shop</a>
+                <a href="projects.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Projects</a>
+                <a href="people.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">People</a>
+                <a href="journal.html" class="block px-3 py-2 text-brand-primary font-semibold">Journal</a>
+                <a href="contact.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold text-brand-coffee mb-6">Journal</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Stories from the field, farmer voices, and updates from our journey in Western Kenya
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article class="fade-in">
+                <img src="images/story-featured.jpg" alt="Sacred Hands Coffee story" class="w-full h-96 object-cover rounded-lg shadow-lg mb-8">
+                <div class="mb-4">
+                    <span class="inline-block bg-brand-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Featured Story</span>
+                    <span class="text-gray-500 ml-4">January 15, 2025</span>
+                </div>
+                <h2 class="text-4xl font-serif font-bold text-brand-coffee mb-6">The Story Behind Sacred Hands Coffee</h2>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        In the rolling hills of Western Kenya, where morning mist clings to coffee plants and the soil tells stories of generations past, Sacred Hands Coffee was born from a simple yet powerful vision: to transform how the world sees and values Kenyan coffee beyond the traditional Mt. Kenya regions.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Founder Hansel Iravonga grew up watching smallholder farmers struggle to get fair prices for their exceptional coffee. Despite the region's high elevation, fertile volcanic soils, and unique coffee varieties, Western Kenya remained overshadowed by more established coffee-producing areas. This untapped potential became the foundation for what would become Sacred Hands Coffee Project.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        "I realized that the missing link wasn't quality—our farmers were already growing incredible coffee," explains Iravonga. "What was missing was organization, knowledge sharing, and direct market access. Sacred Hands Coffee was created to bridge these gaps."
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        From the beginning, the project took a holistic approach. Rather than simply buying coffee, Sacred Hands invested in year-round farmer education through the Farmer Field School program, implemented quality-based pricing with premiums, and created direct relationships between farmers and international roasters.
+                    </p>
+                    <div class="bg-brand-light p-6 rounded-lg mb-8">
+                        <h3 class="text-xl font-semibold text-brand-coffee mb-4">Impact in Numbers</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-brand-primary">500+</div>
+                                <div class="text-gray-600">Farmers trained</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-brand-primary">50+</div>
+                                <div class="text-gray-600">Micro-lots produced</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-brand-primary">25%</div>
+                                <div class="text-gray-600">Average price increase</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Today, Sacred Hands Coffee continues to grow, driven by the same principle that started it all: exceptional coffee is the result of exceptional relationships. Every cup tells the story of dedicated farmers, innovative processing, and a commitment to sustainable practices that benefit both people and the environment.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Recent Articles -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-serif font-bold text-brand-coffee mb-4">Recent Stories</h2>
+                <p class="text-lg text-gray-600">Latest updates from our farmers and projects</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images/farmer-voices.jpg" alt="Farmer voices story" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="inline-block bg-brand-secondary text-white px-3 py-1 rounded-full text-sm">Farmer Voices</span>
+                            <span class="text-gray-500 ml-4">January 10, 2025</span>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-brand-coffee mb-4">Voices from the Field: Meet Our Farmers</h3>
+                        <p class="text-gray-600 mb-4">
+                            In this intimate portrait series, we share the stories of the dedicated farmers who make Sacred Hands Coffee possible. From Mary Nafula's journey to quality improvement to John Otieno's innovative farming techniques...
+                        </p>
+                        <a href="#" class="text-brand-primary font-semibold hover:text-brand-secondary">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images/tree-planting.jpg" alt="Tree planting story" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="inline-block bg-green-600 text-white px-3 py-1 rounded-full text-sm">Environment</span>
+                            <span class="text-gray-500 ml-4">January 5, 2025</span>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-brand-coffee mb-4">Why Indigenous Trees Matter for Coffee's Future</h3>
+                        <p class="text-gray-600 mb-4">
+                            Climate change poses unprecedented challenges to coffee farming. Through our Hands for Msitu project, we're planting indigenous trees that not only protect coffee plants but also preserve local ecosystems...
+                        </p>
+                        <a href="#" class="text-brand-primary font-semibold hover:text-brand-secondary">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-brand-coffee text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h2 class="text-3xl font-serif font-bold mb-4">Stay Updated</h2>
+                <p class="text-lg mb-8">Subscribe to receive stories from the field and updates on our projects</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-gray-900">
+                    <button type="submit" class="btn-primary bg-brand-primary hover:bg-brand-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archive -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-serif font-bold text-brand-coffee mb-4">Article Archive</h2>
+                <p class="text-gray-600">Explore our complete collection of stories and updates</p>
+            </div>
+            
+            <div class="space-y-4 fade-in">
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                        <div>
+                            <h3 class="text-lg font-semibold text-brand-coffee mb-1">The Science of Coffee Processing</h3>
+                            <p class="text-gray-600 text-sm">Understanding how different processing methods affect flavor profiles...</p>
+                        </div>
+                        <div class="text-gray-500 text-sm mt-2 sm:mt-0">December 28, 2024</div>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                        <div>
+                            <h3 class="text-lg font-semibold text-brand-coffee mb-1">Harvest Season 2024: A Year of Growth</h3>
+                            <p class="text-gray-600 text-sm">Reflecting on our achievements and lessons learned during the 2024 harvest...</p>
+                        </div>
+                        <div class="text-gray-500 text-sm mt-2 sm:mt-0">December 20, 2024</div>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                        <div>
+                            <h3 class="text-lg font-semibold text-brand-coffee mb-1">Building Partnerships: Roasters and Farmers</h3>
+                            <p class="text-gray-600 text-sm">How direct trade relationships benefit everyone in the coffee supply chain...</p>
+                        </div>
+                        <div class="text-gray-500 text-sm mt-2 sm:mt-0">December 15, 2024</div>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                        <div>
+                            <h3 class="text-lg font-semibold text-brand-coffee mb-1">Youth in Agriculture: The Next Generation</h3>
+                            <p class="text-gray-600 text-sm">Meet the young Field Extension Officers leading change in their communities...</p>
+                        </div>
+                        <div class="text-gray-500 text-sm mt-2 sm:mt-0">December 10, 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-coffee text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Sacred Hands Coffee</h3>
+                    <p class="text-gray-300">Coffee with a purpose, from sacred hands to yours.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-brand-primary">Our Story</a></li>
+                        <li><a href="shop.html" class="text-gray-300 hover:text-brand-primary">Shop</a></li>
+                        <li><a href="projects.html" class="text-gray-300 hover:text-brand-primary">Projects</a></li>
+                        <li><a href="journal.html" class="text-gray-300 hover:text-brand-primary">Journal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-300 mb-2">Email: info@sacredhandscoffee.com</p>
+                    <p class="text-gray-300">Location: Western Kenya</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-brand-primary">Instagram</a>
+                        <a href="#" class="text-gray-300 hover:text-brand-primary">Twitter</a>
+                        <a href="#" class="text-gray-300 hover:text-brand-primary">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Sacred Hands Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

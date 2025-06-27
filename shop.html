@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacred Hands Coffee - Coffee With a Purpose</title>
-    <meta name="description" content="Sacred Hands Coffee Project - Premium specialty coffee from Western Kenya. Coffee with a purpose, from sacred hands to yours.">
-    <meta name="keywords" content="specialty coffee, Kenya coffee, smallholder farmers, sustainable coffee, micro-lots">
+    <title>Shop - Sacred Hands Coffee</title>
+    <meta name="description" content="Shop premium specialty coffee from Western Kenya. Traceable micro-lots from Sacred Hands Coffee Project.">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
     <!-- Google Fonts -->
@@ -48,12 +47,11 @@
                     <h1 class="text-2xl font-serif font-bold text-brand-coffee">Sacred Hands Coffee</h1>
                 </div>
                 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="index.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Home</a>
                         <a href="about.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Our Story</a>
-                        <a href="shop.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Shop</a>
+                        <a href="shop.html" class="text-brand-primary font-semibold">Shop</a>
                         <a href="projects.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Projects</a>
                         <a href="people.html" class="text-brand-coffee hover:text-brand-primary transition-colors">People</a>
                         <a href="journal.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Journal</a>
@@ -61,7 +59,6 @@
                     </div>
                 </div>
                 
-                <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button type="button" class="mobile-menu-btn" id="mobile-menu-btn">
                         <span class="hamburger-line"></span>
@@ -72,12 +69,11 @@
             </div>
         </div>
         
-        <!-- Mobile Navigation -->
         <div class="md:hidden mobile-menu" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
                 <a href="index.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Home</a>
                 <a href="about.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Our Story</a>
-                <a href="shop.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Shop</a>
+                <a href="shop.html" class="block px-3 py-2 text-brand-primary font-semibold">Shop</a>
                 <a href="projects.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Projects</a>
                 <a href="people.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">People</a>
                 <a href="journal.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Journal</a>
@@ -87,87 +83,47 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section relative h-screen flex items-center justify-center text-white" style="background-image: url('images/hero.jpg');">
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="relative z-10 text-center px-4 fade-in">
-            <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6">Coffee With a Purpose</h1>
-            <p class="text-xl md:text-2xl mb-8 font-light">From Sacred Hands to Yours</p>
-            <div class="space-x-4">
-                <a href="shop.html" class="btn-primary">Shop Now</a>
-                <a href="about.html" class="btn-secondary">Our Story</a>
+    <section class="pt-24 pb-16 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold text-brand-coffee mb-6">Our Coffee</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Premium micro-lots from Western Kenya's smallholder farmers
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Featured Products -->
+    <!-- Filter Section -->
+    <section class="py-8 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active" data-filter="all">All Coffee</button>
+                <button class="filter-btn" data-filter="Light Roast">Light Roast</button>
+                <button class="filter-btn" data-filter="Medium Roast">Medium Roast</button>
+                <button class="filter-btn" data-filter="Dark Roast">Dark Roast</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-4xl font-serif font-bold text-brand-coffee mb-4">Featured Coffees</h2>
-                <p class="text-lg text-gray-600">Discover our premium micro-lots from Western Kenya</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="featured-products">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
                 <!-- Products will be loaded via JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Mission Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in">
-                    <h2 class="text-4xl font-serif font-bold text-brand-coffee mb-6">Our Mission</h2>
-                    <p class="text-lg text-gray-600 mb-6">
-                        The Sacred Hands Coffee Project is transforming the coffee landscape in Western Kenya through 
-                        producer-led initiatives that focus on quality, sustainability, and direct farmer relationships.
-                    </p>
-                    <p class="text-lg text-gray-600 mb-8">
-                        We assist smallholder farmers in organizing and acquiring knowledge about quality coffee cultivation, 
-                        creating traceable micro-lots while improving livelihoods.
-                    </p>
-                    <a href="about.html" class="btn-primary">Learn More</a>
-                </div>
-                <div class="fade-in">
-                    <img src="images/mission.jpg" alt="Coffee farmers in Western Kenya" class="rounded-lg shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Highlight -->
-    <section class="py-16 bg-brand-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-4xl font-serif font-bold text-brand-coffee mb-4">Hands for Msitu</h2>
-                <p class="text-lg text-gray-700">Our reforestation project planting indigenous trees in coffee communities</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center fade-in">
-                    <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white text-2xl">🌱</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-brand-coffee mb-2">Nurseries</h3>
-                    <p class="text-gray-600">Establishing tree nurseries in farming communities</p>
-                </div>
-                <div class="text-center fade-in">
-                    <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white text-2xl">🌳</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-brand-coffee mb-2">Distribution</h3>
-                    <p class="text-gray-600">Distributing trees via Farmer Field Schools</p>
-                </div>
-                <div class="text-center fade-in">
-                    <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-white text-2xl">🌍</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-brand-coffee mb-2">Education</h3>
-                    <p class="text-gray-600">Training in sustainable planting practices</p>
-                </div>
-            </div>
-            <div class="text-center mt-8 fade-in">
-                <a href="projects.html" class="btn-primary">Explore Our Projects</a>
-            </div>
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-brand-coffee text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-4">Stay Connected</h2>
+            <p class="text-lg mb-8">Get updates on new coffee releases and stories from our farmers</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-gray-900">
+                <button type="submit" class="btn-primary bg-brand-primary hover:bg-brand-secondary">Subscribe</button>
+            </form>
         </div>
     </section>
 

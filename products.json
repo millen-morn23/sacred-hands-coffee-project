@@ -1,0 +1,75 @@
+
+[
+  {
+    "id": 1,
+    "name": "Ruiru Estate",
+    "image": "images/product1.jpg",
+    "roast": "Light Roast",
+    "notes": "Floral, Citrus, Bright",
+    "price": "$16.00",
+    "description": "A delicate light roast showcasing the unique terroir of Western Kenya's Ruiru estate.",
+    "origin": "Bungoma County",
+    "process": "Washed",
+    "altitude": "1800m"
+  },
+  {
+    "id": 2,
+    "name": "Sacred Hills Lot #3",
+    "image": "images/product2.jpg",
+    "roast": "Medium Roast",
+    "notes": "Chocolate, Stone Fruit, Balanced",
+    "price": "$18.50",
+    "description": "Our premium medium roast with complex flavor notes and exceptional balance.",
+    "origin": "Kakamega County",
+    "process": "Natural",
+    "altitude": "1650m"
+  },
+  {
+    "id": 3,
+    "name": "Msitu Blend",
+    "image": "images/product3.jpg",
+    "roast": "Medium Roast",
+    "notes": "Caramel, Nuts, Smooth",
+    "price": "$15.00",
+    "description": "A smooth and approachable blend supporting our Hands for Msitu reforestation project.",
+    "origin": "Multi-origin Blend",
+    "process": "Mixed",
+    "altitude": "1500-1800m"
+  },
+  {
+    "id": 4,
+    "name": "Western Reserve",
+    "image": "images/product4.jpg",
+    "roast": "Dark Roast",
+    "notes": "Chocolate, Smoky, Bold",
+    "price": "$17.00",
+    "description": "A bold dark roast that maintains the origin character while delivering rich, deep flavors.",
+    "origin": "Vihiga County",
+    "process": "Washed",
+    "altitude": "1700m"
+  },
+  {
+    "id": 5,
+    "name": "Farmers' Choice",
+    "image": "images/product5.jpg",
+    "roast": "Medium Roast",
+    "notes": "Berries, Wine, Complex",
+    "price": "$19.00",
+    "description": "A special lot selected by our farmer partners showcasing exceptional quality.",
+    "origin": "Siaya County",
+    "process": "Honey",
+    "altitude": "1600m"
+  },
+  {
+    "id": 6,
+    "name": "Heritage Blend",
+    "image": "images/product6.jpg",
+    "roast": "Light Roast",
+    "notes": "Tea-like, Delicate, Clean",
+    "price": "$16.50",
+    "description": "Celebrating traditional coffee varieties and processing methods of Western Kenya.",
+    "origin": "Busia County",
+    "process": "Washed",
+    "altitude": "1550m"
+  }
+]

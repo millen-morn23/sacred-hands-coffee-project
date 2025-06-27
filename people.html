@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People - Sacred Hands Coffee</title>
+    <meta name="description" content="Meet the dedicated team behind Sacred Hands Coffee Project - farmers, roasters, field officers, and agronomists working together.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#C6A988',
+                            secondary: '#8B4513',
+                            coffee: '#6F4E37',
+                            light: '#E8D5B7',
+                            dark: '#5D4037'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-serif font-bold text-brand-coffee">Sacred Hands Coffee</h1>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Home</a>
+                        <a href="about.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Our Story</a>
+                        <a href="shop.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Shop</a>
+                        <a href="projects.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Projects</a>
+                        <a href="people.html" class="text-brand-primary font-semibold">People</a>
+                        <a href="journal.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Journal</a>
+                        <a href="contact.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-btn" id="mobile-menu-btn">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:hidden mobile-menu" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+                <a href="index.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Our Story</a>
+                <a href="shop.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Shop</a>
+                <a href="projects.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Projects</a>
+                <a href="people.html" class="block px-3 py-2 text-brand-primary font-semibold">People</a>
+                <a href="journal.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Journal</a>
+                <a href="contact.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold text-brand-coffee mb-6">Our People</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We work with dedicated farmers, roasters, field officers, and agronomists to uplift lives through the power of coffee
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h2 class="text-3xl font-serif font-bold text-brand-coffee mb-6">Our Philosophy</h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    At Sacred Hands Coffee, we believe that great coffee is only possible through great relationships. Our network extends beyond traditional supply chains to create meaningful partnerships that benefit everyone involved—from the smallholder farmers who nurture each coffee plant to the roasters who bring out the unique character of our beans.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Every person in our network contributes their expertise, passion, and dedication to ensure that Sacred Hands Coffee maintains its commitment to quality, sustainability, and positive impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-serif font-bold text-brand-coffee mb-4">Leadership Team</h2>
+                <p class="text-lg text-gray-600">The visionaries behind Sacred Hands Coffee Project</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images/hansel-iravonga.jpg" alt="Hansel Iravonga" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif font-bold text-brand-coffee mb-2">Hansel Iravonga</h3>
+                        <p class="text-brand-primary font-semibold mb-4">Founder & Project Director</p>
+                        <p class="text-gray-600 mb-4">
+                            "My vision for Sacred Hands Coffee came from witnessing the untapped potential of Western Kenya's coffee farmers. I established this project to create direct pathways for smallholder farmers to access better markets while maintaining the quality and character that makes our region special."
+                        </p>
+                        <p class="text-gray-600">
+                            With a background in agricultural development and a deep understanding of local farming practices, Hansel leads our mission to transform coffee cultivation in Western Kenya through education, quality focus, and sustainable practices.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images/field-coordinator.jpg" alt="Field Coordinator" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif font-bold text-brand-coffee mb-2">Sarah Wanjiku</h3>
+                        <p class="text-brand-primary font-semibold mb-4">Head of Field Operations</p>
+                        <p class="text-gray-600 mb-4">
+                            "Working directly with farmers has taught me that sustainable change happens through consistent support and education. Our Farmer Field School program isn't just about teaching techniques—it's about building confidence and community."
+                        </p>
+                        <p class="text-gray-600">
+                            Sarah coordinates our on-ground activities, manages relationships with farming communities, and ensures that our quality standards are maintained throughout the cultivation and processing phases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Field Extension Officers -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-serif font-bold text-brand-coffee mb-4">Field Extension Officers</h2>
+                <p class="text-lg text-gray-600">Young agricultural graduates leading community development</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center fade-in">
+                    <img src="images/officer1.jpg" alt="Field Extension Officer" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-brand-coffee mb-2">David Mwangi</h3>
+                    <p class="text-brand-primary font-semibold mb-3">Extension Officer - Bungoma</p>
+                    <p class="text-gray-600 text-sm">
+                        "Seeing farmers implement new techniques and achieve better yields motivates me every day. My role is to bridge the gap between agricultural science and practical farming."
+                    </p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <img src="images/officer2.jpg" alt="Field Extension Officer" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-brand-coffee mb-2">Grace Achieng</h3>
+                    <p class="text-brand-primary font-semibold mb-3">Extension Officer - Kakamega</p>
+                    <p class="text-gray-600 text-sm">
+                        "I focus on sustainable practices and climate-smart agriculture. Teaching farmers how to adapt to changing weather patterns is crucial for our future."
+                    </p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <img src="images/officer3.jpg" alt="Field Extension Officer" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-brand-coffee mb-2">Peter Kiprotich</h3>
+                    <p class="text-brand-primary font-semibold mb-3">Extension Officer - Vihiga</p>
+                    <p class="text-gray-600 text-sm">
+                        "Quality starts at the farm level. I work with farmers to ensure proper harvesting and processing techniques that bring out the best in our coffee."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Farmers -->
+    <section class="py-16 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-serif font-bold text-brand-coffee mb-4">Our Farming Partners</h2>
+                <p class="text-lg text-gray-600">The heart of Sacred Hands Coffee - our dedicated smallholder farmers</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images/farmer-portrait1.jpg" alt="Coffee farmer" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-brand-coffee mb-1">Mary Nafula</h3>
+                        <p class="text-brand-primary text-sm mb-2">Farmer - Busia County</p>
+                        <p class="text-gray-600 text-sm">
+                            "Sacred Hands has helped me improve my coffee quality and get better prices. Now I can invest in my children's education."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images/farmer-portrait2.jpg" alt="Coffee farmer" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-brand-coffee mb-1">John Otieno</h3>
+                        <p class="text-brand-primary text-sm mb-2">Farmer - Siaya County</p>
+                        <p class="text-gray-600 text-sm">
+                            "The training programs have transformed how I approach coffee farming. My yields have increased significantly."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images/farmer-portrait3.jpg" alt="Coffee farmer" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-brand-coffee mb-1">Agnes Wekesa</h3>
+                        <p class="text-brand-primary text-sm mb-2">Farmer - Bungoma County</p>
+                        <p class="text-gray-600 text-sm">
+                            "Being part of Sacred Hands means being part of a community that cares about quality and sustainability."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images/farmer-portrait4.jpg" alt="Coffee farmer" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-brand-coffee mb-1">Samuel Mukhwana</h3>
+                        <p class="text-brand-primary text-sm mb-2">Farmer - Kakamega County</p>
+                        <p class="text-gray-600 text-sm">
+                            "The tree planting program has improved my farm's environment and made my coffee plants healthier."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Our Team -->
+    <section class="py-16 bg-brand-coffee text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h2 class="text-4xl font-serif font-bold mb-6">Join Our Mission</h2>
+                <p class="text-lg mb-8">
+                    Whether you're a coffee professional, agricultural expert, or someone passionate about sustainable development, there are many ways to contribute to Sacred Hands Coffee's mission.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-brand-primary bg-opacity-20 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">For Coffee Roasters</h3>
+                        <p class="mb-4">Partner with us to source exceptional micro-lots while supporting farmer livelihoods and environmental sustainability.</p>
+                    </div>
+                    <div class="bg-brand-primary bg-opacity-20 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3">For Agricultural Experts</h3>
+                        <p class="mb-4">Share your expertise through our Farmer Field School program and help build climate-resilient farming practices.</p>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn-primary bg-brand-primary hover:bg-brand-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-coffee text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Sacred Hands Coffee</h3>
+                    <p class="text-gray-300">Coffee with a purpose, from sacred hands to yours.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-brand-primary">Our Story</a></li>
+                        <li><a href="shop.html" class="text-gray-300 hover:text-brand-primary">Shop</a></li>
+                        <li><a href="projects.html" class="text-gray-300 hover:text-brand-primary">Projects</a></li>
+                        <li><a href="journal.html" class="text-gray-300 hover:text-brand-primary">Journal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-300 mb-2">Email: info@sacredhandscoffee.com</p>
+                    <p class="text-gray-300">Location: Western Kenya</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-brand-primary">Instagram</a>
+                        <a href="#" class="text-gray-300 hover:text-brand-primary">Twitter</a>
+                        <a href="#" class="text-gray-300 hover:text-brand-primary">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 Sacred Hands Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
