@@ -277,3 +277,32 @@ document.addEventListener('error', function(e) {
 // Console message for developers
 console.log('%c🌱 Sacred Hands Coffee Website', 'color: #C6A988; font-size: 16px; font-weight: bold;');
 console.log('%cCoffee with a purpose, from sacred hands to yours.', 'color: #6F4E37; font-size: 12px;');
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Load featured products
+  fetch('products.json')
+    .then(res => res.json())
+    .then(products => {
+      const container = document.getElementById('featured-products');
+      container.innerHTML = '';
+
+      products.slice(0, 4).forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'bg-white shadow rounded-lg overflow-hidden';
+
+        card.innerHTML = `
+          <img src="${p.image}" alt="${p.name}" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">${p.name}</h3>
+            <p class="text-gray-600 mt-2">${p.description}</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-lg font-bold text-brand-coffee">${p.price}</span>
+              <button class="btn-primary">Buy Now</button>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(err => console.error('Error loading products:', err));
+});
