@@ -2,19 +2,25 @@
 /* Custom CSS for Sacred Hands Coffee */
 
 /* Base styles and utilities */
-.btn-primary {
-    @apply inline-block px-6 py-3 bg-brand-primary text-white font-semibold rounded-lg hover:bg-brand-secondary transition-colors duration-300;
+.btn-primary { 
+  display:inline-block; padding:0.75rem 1.5rem; background-color:#C6A988; 
+  color:white; font-weight:600; border-radius:0.5rem; 
+  transition:background-color 0.3s; 
 }
+.btn-primary:hover { background-color:#8B4513; }
 
-.btn-secondary {
-    @apply inline-block px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-brand-coffee transition-all duration-300;
+.btn-secondary { 
+  display:inline-block; padding:0.75rem 1.5rem; border:2px solid white; color:white; 
+  font-weight:600; border-radius:0.5rem; transition:all 0.3s; 
 }
+.btn-secondary:hover { background-color:white; color:#6F4E37; }
 
 /* Hero section background */
 .hero-section {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    
 }
 
 /* Mobile menu styles */
@@ -253,13 +259,18 @@ blockquote {
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-    .btn-primary {
-        border: 2px solid currentColor;
-    }
+    .btn-primary { 
+  display:inline-block; padding:0.75rem 1.5rem; background-color:#C6A988; 
+  color:white; font-weight:600; border-radius:0.5rem; 
+  transition:background-color 0.3s; 
+}
+.btn-primary:hover { background-color:#8B4513; }
     
-    .btn-secondary {
-        border-width: 3px;
-    }
+    .btn-secondary { 
+  display:inline-block; padding:0.75rem 1.5rem; border:2px solid white; color:white; 
+  font-weight:600; border-radius:0.5rem; transition:all 0.3s; 
+}
+.btn-secondary:hover { background-color:white; color:#6F4E37; }
 }
 
 /* Reduced motion support */

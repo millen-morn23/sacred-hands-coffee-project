@@ -8,92 +8,58 @@
     <meta name="description" content="Sacred Hands Coffee Project - Premium specialty coffee from Western Kenya. Coffee with a purpose, from sacred hands to yours.">
     <meta name="keywords" content="specialty coffee, Kenya coffee, smallholder farmers, sustainable coffee, micro-lots">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS CDN -->
+    <!-- WARNING: Tailwind @apply will not work unless you're using PostCSS. Use full utility classes or a build process. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            primary: '#C6A988',
-                            secondary: '#8B4513',
-                            coffee: '#6F4E37',
-                            light: '#E8D5B7',
-                            dark: '#5D4037'
-                        }
+                        'brand-primary': '#C6A988',
+                        'brand-secondary': '#8B4513',
+                        'brand-coffee': '#6F4E37',
+                        'brand-light': '#E8D5B7',
+                        'brand-dark': '#5D4037'
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
+
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .hero-section {
+        background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+    </style>
+    <script src="scripts/include.js" defer></script>
 </head>
 <body class="font-sans">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full top-0 z-50" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <h1 class="text-2xl font-serif font-bold text-brand-coffee">Sacred Hands Coffee</h1>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Home</a>
-                        <a href="about.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Our Story</a>
-                        <a href="shop.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Shop</a>
-                        <a href="projects.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Projects</a>
-                        <a href="people.html" class="text-brand-coffee hover:text-brand-primary transition-colors">People</a>
-                        <a href="journal.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Journal</a>
-                        <a href="contact.html" class="text-brand-coffee hover:text-brand-primary transition-colors">Contact</a>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" class="mobile-menu-btn" id="mobile-menu-btn">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile Navigation -->
-        <div class="md:hidden mobile-menu" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
-                <a href="index.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Home</a>
-                <a href="about.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Our Story</a>
-                <a href="shop.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Shop</a>
-                <a href="projects.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Projects</a>
-                <a href="people.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">People</a>
-                <a href="journal.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Journal</a>
-                <a href="contact.html" class="block px-3 py-2 text-brand-coffee hover:text-brand-primary">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <div data-include="partials/header.html"></div>
 
-    <!-- Hero Section -->
+    
+<main id="main-content"><!-- Hero Section -->
     <section class="hero-section relative h-screen flex items-center justify-center text-white" style="background-image: url('images/hero.jpg');">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         <div class="relative z-10 text-center px-4 fade-in">
             <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6">Coffee With a Purpose</h1>
             <p class="text-xl md:text-2xl mb-8 font-light">From Sacred Hands to Yours</p>
             <div class="space-x-4">
-                <a href="shop.html" class="btn-primary">Shop Now</a>
+                
                 <a href="about.html" class="btn-secondary">Our Story</a>
             </div>
         </div>
@@ -107,6 +73,8 @@
                 <p class="text-lg text-gray-600">Discover our premium micro-lots from Western Kenya</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="featured-products">
+                <div id="featured-products"></div>
+
                 <!-- Products will be loaded via JavaScript -->
             </div>
         </div>
@@ -129,7 +97,7 @@
                     <a href="about.html" class="btn-primary">Learn More</a>
                 </div>
                 <div class="fade-in">
-                    <img src="images/mission.jpg" alt="Coffee farmers in Western Kenya" class="rounded-lg shadow-lg">
+                    <img src="https://plus.unsplash.com/premium_photo-1666976506270-29610b4af0e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8RmFybWVyJTIwRmllbGQlMjBTY2hvb2wlMjBjb2ZmZWUlMjB0cmFpbmluZyUyMHNlc3Npb24lMjBpbiUyMGtlbnlhfGVufDB8fDB8fHww" alt="Coffee farmers in Western Kenya" class="rounded-lg shadow-lg">
                 </div>
             </div>
         </div>
@@ -172,42 +140,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-coffee text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-2xl font-serif font-bold mb-4">Sacred Hands Coffee</h3>
-                    <p class="text-gray-300">Coffee with a purpose, from sacred hands to yours.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-300 hover:text-brand-primary">Our Story</a></li>
-                        <li><a href="shop.html" class="text-gray-300 hover:text-brand-primary">Shop</a></li>
-                        <li><a href="projects.html" class="text-gray-300 hover:text-brand-primary">Projects</a></li>
-                        <li><a href="journal.html" class="text-gray-300 hover:text-brand-primary">Journal</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <p class="text-gray-300 mb-2">Email: info@sacredhandscoffee.com</p>
-                    <p class="text-gray-300">Location: Western Kenya</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-brand-primary">Instagram</a>
-                        <a href="#" class="text-gray-300 hover:text-brand-primary">Twitter</a>
-                        <a href="#" class="text-gray-300 hover:text-brand-primary">Facebook</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
-                <p class="text-gray-300">&copy; 2025 Sacred Hands Coffee. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    </main>
+<div data-include="partials/footer.html"></div>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>

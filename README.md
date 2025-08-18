@@ -1,73 +1,36 @@
-# Welcome to your Lovable project
+# Sacred Hands Coffee
+Coffee with a purpose — from sacred hands to yours.
 
-## Project info
-
-**URL**: https://lovable.dev/projects/e36e681d-6704-4562-8818-7545fe5461ad
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/e36e681d-6704-4562-8818-7545fe5461ad) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Quick Start
+```bash
+# Option 1: Open the HTML files directly (Tailwind CDN is used)
+# Option 2: Use Vite for local dev
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
+```
+/partials           # Reusable header & footer
+/scripts            # Small JS utilities (HTML includes, etc.)
+products.json       # Store products data
+main.js             # Site interactions (menu, animations, products)
+styles.css          # Custom styles (on top of Tailwind)
+index.html          # Home
+about.html          # Our Story
+shop.html           # Products
+projects.html       # Impact Projects
+people.html         # People & Partners
+journal.html        # Journal/Blog
+contact.html        # Contact
+```
+## What Changed (Audit → Improvements)
+- **Shared layout:** Header and footer moved to `/partials` and injected via `/scripts/include.js`.
+- **Accessibility:** Added skip link, semantic landmarks, and `aria-current` on active nav.
+- **Performance:** Deferred scripts, kept Tailwind on CDN for now.
+- **Maintainability:** Single source of truth for navigation/footer across pages.
+- **SEO:** Consistent metadata across pages (titles & descriptions already present).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e36e681d-6704-4562-8818-7545fe5461ad) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Development Notes
+- If you later switch to a build pipeline, point Tailwind to scan `*.html`, `/partials/*.html`, and `/scripts/*.js` in the config.
+- Keep product images under `/images` and use descriptive `alt` text.
