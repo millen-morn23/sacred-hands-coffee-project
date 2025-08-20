@@ -67,51 +67,7 @@ document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
 
-// Load products from JSON (for shop page)
-async function loadProducts() {
-    try {
-        const response = await fetch('products.json');
-        const products = await response.json();
-        return products;
-    } catch (error) {
-        console.error('Error loading products:', error);
-        // Return fallback products if JSON fails to load
-        return [
-            {
-                id: 1,
-                name: "Ruiru Estate",
-                image: "images/product1.jpg",
-                roast: "Light Roast",
-                notes: "Floral, Citrus, Bright",
-                price: "$16.00"
-            },
-            {
-                id: 2,
-                name: "Sacred Hills Lot #3",
-                image: "images/product2.jpg",
-                roast: "Medium Roast",
-                notes: "Chocolate, Stone Fruit, Balanced",
-                price: "$18.50"
-            },
-            {
-                id: 3,
-                name: "Msitu Blend",
-                image: "images/product3.jpg",
-                roast: "Medium Roast",
-                notes: "Caramel, Nuts, Smooth",
-                price: "$15.00"
-            },
-            {
-                id: 4,
-                name: "Western Reserve",
-                image: "images/product4.jpg",
-                roast: "Dark Roast",
-                notes: "Chocolate, Smoky, Bold",
-                price: "$17.00"
-            }
-        ];
-    }
-}
+
 
 // Display products
 function displayProducts(products, containerId) {
@@ -306,3 +262,40 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error('Error loading products:', err));
 });
+
+function initMobileMenu() {
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("overlay");
+
+  if (!btn || !menu || !overlay) {
+    console.warn("Mobile menu elements not found yet");
+    return;
+  }
+
+  btn.addEventListener("click", () => {
+    const isOpen = menu.classList.contains("translate-x-0");
+
+    if (isOpen) {
+      menu.classList.remove("translate-x-0");
+      menu.classList.add("translate-x-full");
+      overlay.classList.add("hidden");
+    } else {
+      menu.classList.remove("translate-x-full");
+      menu.classList.add("translate-x-0");
+      overlay.classList.remove("hidden");
+    }
+  });
+
+  overlay.addEventListener("click", () => {
+    menu.classList.remove("translate-x-0");
+    menu.classList.add("translate-x-full");
+    overlay.classList.add("hidden");
+  });
+}
+
+// Run after partials are loaded
+document.addEventListener("partialsLoaded", initMobileMenu);
+
+// In case the header is already in the page (not included dynamically)
+document.addEventListener("DOMContentLoaded", initMobileMenu);

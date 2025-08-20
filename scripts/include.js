@@ -1,4 +1,3 @@
-
 // Simple HTML include for partials: <div data-include="partials/header.html"></div>
 (async function() {
   async function include(el) {
@@ -19,6 +18,7 @@
     for (const n of nodes) {
       await include(n);
     }
+
     // After header is injected, set active nav link
     const path = location.pathname.split('/').pop() || 'index.html';
     const links = document.querySelectorAll('nav a[href]');
@@ -32,6 +32,9 @@
         a.removeAttribute('aria-current');
       }
     });
+
+    // ✅ Notify that partials are fully loaded
+    document.dispatchEvent(new Event("partialsLoaded"));
   }
 
   if (document.readyState === 'loading') {
